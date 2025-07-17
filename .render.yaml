@@ -4,5 +4,6 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: ./start.sh
+    rootDir: backend
     plan: free
-    region: oregon
+
