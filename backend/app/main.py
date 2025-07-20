@@ -1,11 +1,9 @@
+# backend/app/main.py
 from fastapi import FastAPI
-from app.config import settings
 
 app = FastAPI()
 
-@app.get('/')
+@app.get("/")
 def read_root():
-    return {
-        'db_url': settings.DATABASE_URL,
-        'neo4j': settings.NEO4J_URI
-    }
+    return {"message": "Hello from GLEICOP backend"}
+
