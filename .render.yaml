@@ -9,3 +9,5 @@ services:
     plan: free
     build:
       workingDir: backend
+    start:
+      workingDir: backend
