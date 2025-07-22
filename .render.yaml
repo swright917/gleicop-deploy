@@ -3,8 +3,8 @@ services:
   - type: web
     name: gleicop-backend
     env: python
-    rootDir: backend
+    rootDir: backend  # <--- REQUIRED so Render installs and starts here
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app.main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000"
+    startCommand: "./start.sh"
     plan: free
 
