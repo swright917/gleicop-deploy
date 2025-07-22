@@ -3,8 +3,9 @@ services:
   - type: web
     name: gleicop-backend
     env: python
-    rootDir: backend  # <--- REQUIRED so Render installs and starts here
+     # <--- REQUIRED so Render installs and starts here
     buildCommand: "pip install -r requirements.txt"
     startCommand: "./start.sh"
     plan: free
-
+    build:
+      workingDir: backend
